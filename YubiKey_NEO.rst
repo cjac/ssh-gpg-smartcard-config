@@ -35,7 +35,7 @@ This will enable the smartcard portion of your yubi key neo::
 If you have a dev key, Reboot your yubikey (remove and reinsert) so that ykneomgr works.
 
 Configure GNOME-Shell to use gpg-agent and disable ssh-agent
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Configure GPG to use its agent (only for smartcard)::
 
@@ -51,7 +51,7 @@ Allow admin actions on your YubiKey (if your gnupg version is < 2.0.11)::
 
 
 Intercept gnome-keyring-daemon and put gpg-agent in place for ssh authentication (Ubuntu)
-''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 Open Startup Applications
 
 Uncheck "GPG Password Agent" and "SSH Key Agent"
@@ -79,7 +79,7 @@ Disable the other system gpg-agent::
 Note: We could have used the Xsession gpg-agent and trashed the upstart one, but there is an `open bug report <https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=642021>`_ for 90gpg-agent. Also, the upstart script has the capability of exporting the environment variables globally with initctl set-env --global.
 
 Intercept gnome-keyring-daemon and put gpg-agent in place for ssh authentication (Fedora)
-''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 If running gnome, you have to prevent gnome-keyring from autostarting its ssh-agent implementation, because we will use GPG's instead:
 
   sed -e '$aX-GNOME-Autostart-enabled=false' -e '$aHidden=true' \
@@ -140,8 +140,8 @@ The shell rc file::
   ..snip..
 
 
-Reload GNOME-Shell So that the gpg-agent stuff above takes effect. 
-------------------
+Reload GNOME-Shell So that the gpg-agent stuff above takes effect.
+------------------------------------------------------------------
 
 Rebooting the machine works the best.
 
@@ -153,7 +153,7 @@ Included with the gemalto token and GnuPG Smartcard version 2 should be a docume
 
 
 Complete these steps for PIN and then Admin Pin
-~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 default pins are 123456 and 12345678 respectivly 
 
 ::
