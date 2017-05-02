@@ -335,3 +335,4 @@ A special thanks to the following people and/or links.
   * `Smart Cards and Secret Agents <http://blog.flameeyes.eu/2010/08/smart-cards-and-secret-agents>`_
   * `How to mitigate issues between gnupg and gnome keyring manager <http://wiki.gnupg.org/GnomeKeyring>`_
   * `Useful info on how to start the correct agent at login <http://www.bootc.net/archives/2013/06/09/my-perfect-gnupg-ssh-agent-setup/>`_
+  * Daniel Kahn Gillmor of Freenode's #gnupg for suggesting gpg --quick-add-key (from the 2.1.x branch)
